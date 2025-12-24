@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  site_a:
+    build: .
+    ports:
+      - "5021:5020"
+  site_b:
+    build: .
+    ports:
+      - "5022:5020"
+  site_c:
+    build: .
+    ports:
+      - "5023:5020"
