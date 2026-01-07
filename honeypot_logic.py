@@ -6,7 +6,6 @@ import csv
 import datetime
 import os
 
-# --- LOGGING SETUP (Abstract 14: Analysis of Traces) ---
 LOG_FILE = f"attack_log_{os.uname()[1]}.csv"
 
 def log_interaction(address, value, action):
@@ -14,7 +13,6 @@ def log_interaction(address, value, action):
         writer = csv.writer(f)
         writer.writerow([datetime.datetime.now(), address, value, action])
 
-# --- INDUSTRIAL LOGIC (Abstract 12) ---
 class RectifierSim:
     def __init__(self):
         self.voltage = 5400 
